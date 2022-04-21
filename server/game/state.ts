@@ -1,4 +1,9 @@
-export const state = {
+interface State {
+  fields: (string | null)[][]
+  winner: string | null
+}
+
+export const state: State = {
   fields: [
     [null, null, null],
     [null, null, null],
@@ -7,7 +12,7 @@ export const state = {
   winner: null,
 }
 
-export const setWinner = (winner) => {
+export const setWinner = (winner: string) => {
   state.winner = winner
 }
 

@@ -8,6 +8,7 @@ const { data, pending, refresh } = await useAsyncData('game', () =>
 )
 
 const onReset = async () => {
+  // TODO: fix this
   // if (!data.winner) {
   //   return
   // }
