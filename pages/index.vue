@@ -8,9 +8,9 @@ const { data, pending, refresh } = await useAsyncData('game', () =>
 )
 
 const onReset = async () => {
-  if (!data.winner) {
-    return
-  }
+  // if (!data.winner) {
+  //   return
+  // }
 
   try {
     await $fetch('/api/game', {
@@ -18,7 +18,7 @@ const onReset = async () => {
       body: { reset: true },
     })
 
-    refresh()
+    await refresh()
   } catch (error) {
     console.error(error)
   }

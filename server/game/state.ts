@@ -7,7 +7,11 @@ export const state = {
   winner: null,
 }
 
-export const resetFields = () => {
+export const setWinner = (winner) => {
+  state.winner = winner
+}
+
+export const resetState = () => {
   state.fields = [
     [null, null, null],
     [null, null, null],
