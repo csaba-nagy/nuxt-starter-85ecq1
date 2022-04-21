@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@unocss/nuxt": "^0.31.12",
+    "nuxt": "3.0.0-rc.0",
+    "unocss": "^0.31.12"
+  }
+}
