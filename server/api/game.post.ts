@@ -1,21 +1,21 @@
-import { checkWinner, resetFields, state } from '../game/state';
+import { checkWinner, resetFields, state } from '../game/state'
 
 export default defineEventHandler(async (event) => {
-  const { x, y, reset, value } = await useBody(event);
+  const { x, y, reset, value } = await useBody(event)
 
   if (reset) {
-    resetFields();
+    resetFields()
 
-    return { state };
+    return { state }
   }
 
-  state.fields[x][y] ||= value;
+  state.fields[x][y] ||= value
 
   if (!checkWinner(state.fields, value)) {
-    return { state };
+    return { state }
   }
 
-  state.winner = value;
+  state.winner = value
 
-  return { state };
-});
+  return { state }
+})

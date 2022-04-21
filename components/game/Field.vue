@@ -2,11 +2,11 @@
 defineProps({
   coordinates: Object,
   value: String,
-});
+})
 
-const emit = defineEmits(['select']);
+const emit = defineEmits(['select'])
 
-const onClick = () => emit('select');
+const onClick = () => emit('select')
 </script>
 
 <template>

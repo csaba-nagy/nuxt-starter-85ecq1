@@ -1,5 +1,5 @@
-import { defineNuxtConfig } from 'nuxt';
-import transformerVariantGroup from '@unocss/transformer-variant-group';
+import { defineNuxtConfig } from 'nuxt'
+import transformerVariantGroup from '@unocss/transformer-variant-group'
 
 export default defineNuxtConfig({
   buildModules: ['@unocss/nuxt'],
@@ -14,4 +14,4 @@ export default defineNuxtConfig({
       ['pending', 'grayscale'],
     ],
   },
-});
+})

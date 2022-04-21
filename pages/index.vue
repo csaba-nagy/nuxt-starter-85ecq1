@@ -1,28 +1,28 @@
 <script setup>
 definePageMeta({
   layout: false,
-});
+})
 
 const { data, pending, refresh } = await useAsyncData('game', () =>
   $fetch('/api/game')
-);
+)
 
 const onReset = async () => {
   if (!data.winner) {
-    return;
+    return
   }
 
   try {
     await $fetch('/api/game', {
       method: 'post',
       body: { reset: true },
-    });
+    })
 
-    refresh();
+    refresh()
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
-};
+}
 </script>
 
 <template>

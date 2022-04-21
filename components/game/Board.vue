@@ -2,34 +2,34 @@
 const props = defineProps({
   fields: Array,
   winner: String,
-});
+})
 
-const sings = ['⭕', '❌'];
-let counter = 0;
+const sings = ['⭕', '❌']
+let counter = 0
 
-const emit = defineEmits(['select']);
+const emit = defineEmits(['select'])
 
 const onSelect = async ({ x, y }) => {
   // If field is not empty.
   if (props.winner || props.fields[x][y]) {
-    return;
+    return
   }
 
   // Alternate the user sign.
-  const value = sings[counter++ % sings.length];
+  const value = sings[counter++ % sings.length]
 
   try {
     // Send current selection.
     await $fetch('/api/game', {
       method: 'post',
       body: { x, y, value },
-    });
+    })
 
-    emit('select');
+    emit('select')
   } catch (error) {
-    console.error(error);
+    console.error(error)
   }
-};
+}
 </script>
 
 <template>
